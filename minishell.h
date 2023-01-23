@@ -13,6 +13,8 @@
 # include <errno.h>
 # include <signal.h>
 
+# define BUFF_SIZE 4096
+
 typedef enum e_exit
 {
     SUCCESS,
@@ -39,5 +41,33 @@ typedef struct s_mini
     int ret;
     int exit;
 } t_mini;
+
+//BUILT-INS
+//ECHO
+int ft_echo(char **args);
+
+//ENV
+int ft_env(t_env *env);
+
+//EXIT
+void ft_exit(t_mini *mini, char **cmd);
+
+//PWD
+int ft_pwd(void);
+
+//EXPORT
+int env_add(const char *value, t_env *env);
+char *get_env_name(char *dest, const char *src);
+int is_in_env(t_env *env, char *args);
+int ft_export(char **args, t_env *env, t_env *secret);
+
+//CD
+int ft_cd(char **args, t_env *env);
+
+
+
+
+
+
 
 #endif
