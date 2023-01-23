@@ -64,7 +64,8 @@ int ft_export(char **args, t_env *env, t_env *secret);
 //CD
 int ft_cd(char **args, t_env *env);
 
-
+//UNSET
+int ft_unset(char **a, t_mini *mini);
 
 
 
